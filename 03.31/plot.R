@@ -10,7 +10,7 @@ pie (x,init.angle = 90,labels=label,main="부서별 영업 실적")
 #색과 라벨 수정
 pct <- round(x/sum(x)*100)
 label <-paste(label,pct)
-lable <- paste(lable,"%",sep="") #paste 문자와 숫자를 연결시키려면 사용하는 함수
+label <- paste(label,"%",sep="") #paste 문자와 숫자를 연결시키려면 사용하는 함수
 pie(x,
     labels=label,
     init.angle = 90,
@@ -29,7 +29,7 @@ pie3D(x,labels=label,
 #기본 바 차트 출력
 height <- c(9,15,20,6)
 name <- c("영업1팀","영업2팀","영업3팀","영업4팀")
-barplot(height,names.arg = name,main="부서별 영업 실적")
+barplot(height,names.arg = name,main="부서별 영업 실적") #arg argument
 
 #막대 색 지정
 barplot(height,

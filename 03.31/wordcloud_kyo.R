@@ -57,12 +57,25 @@ wordcloud(word, frequency,colors=pal2)
 # 8. 워드클라우드 출력 : wordcloud()
 
 data = read.csv(file.choose(),header=T)
+View(data)
+
 data2 = data[data$행정구역.시군구.별!="전국",]
+View(data2)
+
 x = grep("구$",data2$행정구역.시군구.별)
+head(x)
+
 data3 <- data2[-c(x),]
-data4 = data3[data3$순이동.명>0]
+View(data3)
+
+data4 = data3[data3$순이동.명.>0,]
+View(data4)
+
 word <-data4$행정구역.시군구.별
+print(word)
+
 frequency <- data4$순이동.명
+head(frequency)
 pal2 <-  brewer.pal(length(frequency),"Dark2")
 
 wordcloud(word,frequency,random.order = T,
