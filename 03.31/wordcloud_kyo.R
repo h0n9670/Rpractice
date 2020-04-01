@@ -107,7 +107,7 @@ wordcloud(names(word_count),
           random.order = F,
           rot.per=.1,
           colors=pal2
-          )
+)
 
 text1 <- readLines(file.choose())
 text1
@@ -130,4 +130,3 @@ wordcloud(names(word_countt),
           rot.per=.1,
           colors=pal2
 )
-
